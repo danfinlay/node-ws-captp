@@ -1,0 +1,22 @@
+{
+  "name": "node-ws-captp",
+  "version": "1.0.0",
+  "description": "A module for exposing a CapTP interface over websockets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Dan Finlay <dan@danfinlay.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@agoric/harden": "^0.0.8",
+    "captp-stream": "^1.0.1",
+    "ndjson": "^1.5.0",
+    "pumpify": "^2.0.1",
+    "websocket-stream": "^5.5.2",
+    "ws": "^7.3.0"
+  },
+  "devDependencies": {
+    "tape": "^5.0.1"
+  }
+}
