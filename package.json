@@ -1,10 +1,11 @@
 {
   "name": "node-ws-captp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A module for exposing a CapTP interface over websockets.",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "start": "node server.js"
   },
   "author": "Dan Finlay <dan@danfinlay.com>",
   "license": "ISC",
@@ -18,5 +19,19 @@
   },
   "devDependencies": {
     "tape": "^5.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danfinlay/node-ws-captp.git"
+  },
+  "keywords": [
+    "Node",
+    "Browserify",
+    "WebSocket",
+    "CapTP"
+  ],
+  "bugs": {
+    "url": "https://github.com/danfinlay/node-ws-captp/issues"
+  },
+  "homepage": "https://github.com/danfinlay/node-ws-captp#readme"
 }
