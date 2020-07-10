@@ -1,4 +1,4 @@
-const makeCapTpFromStream = require('captp-stream');
+const makeCapTpAndStream = require('captp-stream');
 const websocket = require('websocket-stream');
 const pipeline = require('pumpify');
 const ndjson = require('ndjson');
@@ -10,16 +10,15 @@ module.exports = function connectToAddress (address) {
     objectMode: true,
   });
 
-  const stream = pipeline.obj(ndjson.serialize(), ws, ndjson.parse());
-
-  const { E, getBootstrap, abort } = makeCapTpFromStream('server', stream, harden({}));
+  const { E, getBootstrap, abort, captpStream } = makeCapTpAndStream('server', harden({}));
+  pipeline.obj(captpStream, ws, captpStream);
 
   return {
     E,
     getBootstrap,
     abort: () => {
       abort();
-      stream.destroy();
+      captpStream.destroy();
     }
   }
 }

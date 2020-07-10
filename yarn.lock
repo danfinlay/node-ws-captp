@@ -116,10 +116,10 @@ builtin-modules@^3.1.0:
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-3.1.0.tgz#aad97c15131eb76b65b50ef208e7584cd76a7484"
   integrity sha512-k0KL0aWZuBt2lrxrcASWDfwOLMnodeQjodT/1SxEQAXsHANgo6ZC/VEaSEHCXt7aSTZ4/4H5LKa+tBXmW7Vtvw==
 
-captp-stream@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/captp-stream/-/captp-stream-1.0.1.tgz#9329f90d8ed2b7073e43fb72f2ba0cfd35f48cf1"
-  integrity sha512-SE+JlzzAO+OLWaIr7p8UehMJd2pJEytr9+aFd1qgw9Pm5cx05AI28X1i5vT0iLVfS6vuvtfzRi73SqQGLWMvFg==
+captp-stream@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/captp-stream/-/captp-stream-2.0.0.tgz#3792130a9f8a9fdba212938bb4fa4cc2e01daddc"
+  integrity sha512-po+6Cq6UBqJRDphSTkcVEfAWKPeTnKsk/K5pHkCtnOi8wRzwaQDm7MpkHhlbF+Pd72a0y2kbudA0+L5pdknG3Q==
   dependencies:
     "@agoric/captp" "^1.2.3"
 

@@ -1,4 +1,4 @@
-const makeCapTpFromStream = require('captp-stream');
+const makeCapTpAndStream = require('captp-stream');
 const ndjson = require('ndjson');
 const pipeline = require('pumpify');
 const harden = require('@agoric/harden');
@@ -27,12 +27,14 @@ module.exports = function hostWsCapTpServerAtPort (bootstrap, port, _server) {
 
   return () => {
     abort();
-    server.close();
+    if (server) {
+      server.close();
+    }
   }
 }
 
 function handle (ws, bootstrap) {
-  const stream = pipeline.obj(ndjson.serialize(),  ws, ndjson.parse());
-  const { abort } = makeCapTpFromStream('server', stream, harden(bootstrap));
+  const { abort, captpStream } = makeCapTpAndStream('server', harden(bootstrap));
+  pipeline.obj(captpStream, ws, captpStream);
   return abort;
 }

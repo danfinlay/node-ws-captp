@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@agoric/harden": "^0.0.8",
-    "captp-stream": "^1.0.1",
+    "captp-stream": "^2.0.0",
     "ndjson": "^1.5.0",
     "pumpify": "^2.0.1",
     "websocket-stream": "^5.5.2",
